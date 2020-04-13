@@ -120,9 +120,9 @@ answers[2] = prompt('А не обманываете?', ''); //задали тр�
 // document.write(answers); //вывели на экран в браузере переменную answers, в которой находится созданный нами массив данных
 
 var sdek = 2;
-var prek += sdek;
+sdek += 3;
 // var prek2 = sdek--;
-console.log(prek);
+console.log(sdek);
 //console.log(prek2);
 
 let mastifNeapoletano = [];
