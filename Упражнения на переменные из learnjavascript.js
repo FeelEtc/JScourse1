@@ -26,7 +26,7 @@ const COLOR_GREEN = "#0F0";
 const COLOR_BLUE = "#00F";
 const COLOR_ORANGE = "#FF7F00";
 
-// ...когда нам нужно выбрать цвет
+// ...когда нам нужно выбрать цвет, к примеру, то легче создать новую переменную с простым именем "color", чем вспоминать кодировку цвета
 let color = COLOR_ORANGE;
 alert(color); // #FF7F00
 
