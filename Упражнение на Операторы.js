@@ -18,14 +18,20 @@ if (UserAge == false) {
    let SexStatus = confirm("Был ли у тебя секс?");
    if (SexStatus == true) {
        alert("ты мачо!");
-   }    else {
+    } else {
        alert("ты девственник!");
    }
 } //код работает. Программа выполняется
 
-/* let UserAge = prompt("Тебе есть 18?", " ");
-if (UserAge == "нет") {
-    alert("не дрочи! Учи JS!");
-// }   else {
 
-// } */
+let UserAge2 = prompt("Сколько тебе лет?", " ");
+if (UserAge2 < 18) {
+    alert("не дрочи! Учи JS!");
+}   else {
+    let SexStatus2 = prompt("Сколько раз у тебя был секс?", " ");
+        if (SexStatus2 > 0) {
+            alert("Ты мачо!");
+        } else {
+            alert("Ты девственник!");
+        }
+}
