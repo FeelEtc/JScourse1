@@ -4,8 +4,8 @@ alert (c);
 // while (true) {
 //    table = 5;
 // var table = 17; 
-// alert ("я ебал гусей");
-// alert ("нихуя");
+// alert(table);
+// }
 let n = 5;
 n = 10;
 let m = 7;
