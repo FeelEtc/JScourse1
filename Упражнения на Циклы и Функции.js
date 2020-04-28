@@ -110,11 +110,11 @@ function myFirstApp(name, age) {
   showSkills();
 
   function checkAge() {
-    let age = prompt('Сколько вам лет?', ' ');
+    //let age = prompt('Сколько вам лет?', ' ');
     if (age >= 18) {
-      alert('у тебя отличные шансы стать front-end developer!');
+      alert('У тебя отличные шансы стать front-end developer!');
     } else {
-      alert('молодец, что ты так рано задумался о своем будущем!');
+      alert('Молодец, что ты так рано задумался о своем будущем!');
     }  
   }
   checkAge();
