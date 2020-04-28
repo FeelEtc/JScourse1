@@ -1,6 +1,6 @@
+//Задачи из learn.javascript.ru
 //Задача 1
 /*let i = 3;
-
 while (i) {
   alert( i-- );
 }
@@ -22,24 +22,29 @@ while (z >= 0) {
 //Для каждого цикла запишите, какие значения он выведет. Потом сравните с ответом.
 //Оба цикла выводят alert с одинаковыми значениями или нет?
 
-/* //Префиксный вариант ++i:
+/* 
+//Префиксный вариант ++i:
 let i = 0;
+while (++i < 5) alert( i );// 1, 2, 3, 4*/
 
-while (++i < 5) alert( i );// 1, 2, 3, 4
-*/
-
-/*
+/* 
 //Постфиксный вариант i++
 let z = 0;
-
 while (z++ < 5) alert(z);// 0, 1, 2, 3
+//ОТВЕТ: цикл с преффиксной и постфиксной формой инкремента выводят разные значения*/
 
-//ОТВЕТ: цикл с преффиксной и постфиксной формой инкремента выводят разные значения
+//примеры циклов do{}while(); и while(){}. Работают с ВНЕШНИМИ переменными.
+/* let i2 = 1;
+do {
+  alert(i2);
+  i2++;
+} while(i2 < 10);
 */
+
 
 //ФУНКЦИИ
 //упражняюсь в выводе функции
-let userName = 'Васян!';
+/* let userName = 'Васян!';
 
 function showMessage(){
   let message = 'Привет, ' + userName;
@@ -63,13 +68,65 @@ function showMessage(){
 showMessage();//в диалоговом окне браузера вывелось "Привет, Васян!" А потом prompt и нужный alert, исходя из ответов пользователя (условий)
 
 //alert(message); //переменная message не выведется в диалоговом окне, т.к. она создана и видна только ВНУТРИ ФУНКЦИИ
+*/
+
+function jopa() {
+  let i = 0;
+  do {
+    console.log(i);
+    i = i + 3;
+  } while(i < 10);
+}
+//jopa();
+
+function MinusNumber() {
+  let i = 10;
+  while(i > 0) {
+    console.log(i);
+    i -= 2;
+  }
+}
+//MinusNumber();
 
 
+function bulki() {
+  for (let i = 100; i > 1; i = i / 10) {
+    console.log(i);
+  }
+}
+bulki();
 
+//Задача после видео "Функции" 
+function myFirstApp(name, age) {
+  alert(`Привет, меня зовут ${name} и это моя первая программа!`);
 
+  function showSkills() {
+    let skills = ['html', 'css', 'javascript', 'python'];
+    //вывести "я владею.....название технологии"
+    for (let i = 0; i < skills.length; i++) {
+      alert(`Я владею ${skills[i]} и это очень круто!`);
+    }
+  }
+  showSkills();
 
+  function checkAge() {
+    let age = prompt('Сколько вам лет?', ' ');
+    if (age >= 18) {
+      alert('у тебя отличные шансы стать front-end developer!');
+    } else {
+      alert('молодец, что ты так рано задумался о своем будущем!');
+    }  
+  }
+  checkAge();
 
+  function calcPow(num) {
+    return num * num;
+  }
+  alert(calcPow(5)); //вывелось значение 25
+  alert(calcPow(9)); //вывелось значение 81
+}
 
+myFirstApp('Александр', '32');
 
 
 
