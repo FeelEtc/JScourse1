@@ -65,46 +65,43 @@ console.log(answers4);
 
 
 //Задача от Шведа: посчитать сумму всех элементов массива
-/* let mastino = [1, 34, 47, -2, 5, 7, 29, -5, -23];
+let mastino = [1, 34, 47, -2, 5, 7, 29, -5, -23];
 
-function piska(pizdetz) {
+function ArraySum(massiv) {
     let sum = 0;
-    for (let i = 0; i  < pizdetz.length; i++){
-        sum = sum + pizdetz[i];
+    for (let i = 0; i  < massiv.length; i++){
+        sum = sum + massiv[i];
         //console.log(sum);
-        //console.log(pizdetz.length);
+        //console.log(massiv.length);
     }
     return sum;
 }
-let noga = piska(mastino);
+let noga = ArraySum(mastino);
 console.log(noga);
 
-let ruka = piska([3, 4, 10]);
+let ruka = ArraySum([3, 4, 10]);
 console.log(ruka);
-*/
+
 
 //Задача: посчитать сумму всех ПОЛОЖИТЕЛЬНЫХ элементов массива
-function piska(pizdetz) {
+function ArraySumPlus(massiv) {
     let sum = 0;    
-    for (let i = 0; i  < pizdetz.length; i++){
-        if(pizdetz[i] > 0) {
-            sum = sum + pizdetz[i];
-            //console.log(sum);
-            //console.log(pizdetz.length);
+    for (let i = 0; i  < massiv.length; i++){
+        if(massiv[i] > 0) {
+            sum = sum + massiv[i];
         } 
     }
     return sum;         
 }
+let TotalArraySumm = ArraySumPlus([1,3,5,7,9, -2, -3, -159]);
+console.log(TotalArraySumm);
 
-let NihuaSebe = piska([1,3,5,7,9, -2, -3, -159]);
-console.log(NihuaSebe);
-
-let YourBunnyWrote = piska([-2,-7,-153000, 1, 2, 3]);
+let YourBunnyWrote = ArraySumPlus([-2,-7,-153000, 1, 2, 3]);
 console.log(YourBunnyWrote);
 
-let mastino = [1, 34, 47, -2, 5, 7, 29, -5, -23];
-let NormNoga = piska(mastino);
-console.log(NormNoga);
+
+
+
 
 
 

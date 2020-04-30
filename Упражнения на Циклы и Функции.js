@@ -70,14 +70,14 @@ showMessage();//в диалоговом окне браузера вывелос
 //alert(message); //переменная message не выведется в диалоговом окне, т.к. она создана и видна только ВНУТРИ ФУНКЦИИ
 */
 
-function jopa() {
+function PlusNumber() {
   let i = 0;
   do {
     console.log(i);
     i = i + 3;
   } while(i < 10);
 }
-//jopa();
+PlusNumber();
 
 function MinusNumber() {
   let i = 10;
@@ -86,33 +86,34 @@ function MinusNumber() {
     i -= 2;
   }
 }
-//MinusNumber();
+MinusNumber();
 
 
-function bulki() {
-  for (let i = 100; i > 1; i = i / 10) {
+function Division() {
+  for (let i = 100; i > 0.5; i = i / 10) {
     console.log(i);
   }
 }
-bulki();
+Division();
+
 
 //Задача после видео "Функции" 
 function myFirstApp(name, age) {
   alert(`Привет, меня зовут ${name} и это моя первая программа!`);
 
   function showSkills() {
-    let skills = ['html', 'css', 'javascript', 'python'];
-    //вывести "я владею.....название технологии"
+    let skills = ['html', 'css', 'javascript', 'python', 'MySQL'];   //вывести: "я владею.....название технологии"
     for (let i = 0; i < skills.length; i++) {
       alert(`Я владею ${skills[i]} и это очень круто!`);
     }
   }
   showSkills();
 
-  function checkAge() {
-    //let age = prompt('Сколько вам лет?', ' ');
+  function checkAge() { //открывается блок кода - "тело функции"
+  let age = prompt('Сколько вам лет?', ' '); //просто заккоментил, дабы эта строчка кода не работала.
+  //Prompt в данном случае - это альтернативный способ введения возраста
     if (age >= 18) {
-      alert('У тебя отличные шансы стать front-end developer!');
+      alert('У меня отличные шансы стать front-end developer!');
     } else {
       alert('Молодец, что ты так рано задумался о своем будущем!');
     }  
@@ -124,9 +125,20 @@ function myFirstApp(name, age) {
   }
   alert(calcPow(5)); //вывелось значение 25
   alert(calcPow(9)); //вывелось значение 81
-}
+} // тело функции закончилось, фигурная скобка закрывается
+myFirstApp('Александр', 32);
 
-myFirstApp('Александр', '32');
+
+// пример прямой проверки на undefined (при параметрах функции по умолчанию)
+function showMessage(from, text) {
+  if (text === undefined) {
+    text = 'текст не добавлен';
+  }
+
+  alert( from + ": " + text );
+}
+showMessage('Славик');
+
 
 
 
