@@ -165,16 +165,18 @@ function showMessage(from, text) {
 }
 showMessage('Славик');
 
-function Greet() {
-  return "Hello World!";
+//Задача: написать функция, которая бы возвращала "hello world!"
+function greet() {
+  return "hello world!";
 }
-console.log(Greet());
+console.log(greet());
 
+//2способ, более замороченный, с аргументами, конкатенацией и вот этим вот всем =)
 function greet1(what, who) {
   let FullPhrase = what + " " + who + "!";
   return FullPhrase;
 }
-console.log(greet1("Hello", "world"));
+console.log(greet1("hello", "world"));
 
 
 
