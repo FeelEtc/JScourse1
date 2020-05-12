@@ -39,3 +39,13 @@ function monkeyCount(n) {
     return monkeyGroup;
 }
 console.log(monkeyCount(10));
+
+//более правильное решение
+function monkeyCount2(n) {
+    let monkeyGroup = [ ];
+    for(let i = 0 ; i < n; i++){
+        monkeyGroup[i] = i + 1;
+    }
+    return monkeyGroup;
+}
+console.log(monkeyCount2(10));
