@@ -64,40 +64,7 @@ do {
 console.log(answers4);
 
 
-//Задача от Шведа: посчитать сумму всех элементов массива
-let mastino = [1, 34, 47, -2, 5, 7, 29, -5, -23];
 
-function ArraySum(massiv) {
-    let sum = 0;
-    for (let i = 0; i  < massiv.length; i++){
-        sum = sum + massiv[i];
-        //console.log(sum);
-        //console.log(massiv.length);
-    }
-    return sum;
-}
-let noga = ArraySum(mastino);
-console.log(noga);
-
-let ruka = ArraySum([3, 4, 10]);
-console.log(ruka);
-
-
-//Задача: посчитать сумму всех ПОЛОЖИТЕЛЬНЫХ элементов массива
-function ArraySumPlus(massiv) {
-    let sum = 0;    
-    for (let i = 0; i  < massiv.length; i++){
-        if(massiv[i] > 0) {
-            sum = sum + massiv[i];
-        } 
-    }
-    return sum;         
-}
-let TotalArraySumm = ArraySumPlus([1,3,5,7,9, -2, -3, -159]);
-console.log(TotalArraySumm);
-
-let YourBunnyWrote = ArraySumPlus([-2,-7,-153000, 1, 2, 3]);
-console.log(YourBunnyWrote);
 
 
 

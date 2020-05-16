@@ -163,7 +163,7 @@ function showMessage(from, text) {
 
   alert( from + ": " + text );
 }
-showMessage('Славик');
+showMessage('Привет');
 
 //Задача: написать функция, которая бы возвращала "hello world!"
 function greet() {
