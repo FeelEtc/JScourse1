@@ -152,12 +152,44 @@ console.log(answers);*/
 //E.g. If we have an array [1,2,3,4,6,7,8] then 1 then 2 then 3 then 4 are all consecutive but 6 is not, so that's the first non-consecutive number.
 //If the whole array is consecutive then return null2.
 //The array will always have at least 2 elements1 and all elements will be numbers. The numbers will also all be unique and in ascending order. The numbers could be positive or negative and the first non-consecutive could be either too!
+//Задача: есть массив из чисел. Числа увеличиваются последовательно. Найти первое из чисел, которое отличается от предыдущего (больше предыдущего) больше, чем на 1
 
 function firstNonConsecutive (arr) {
     for (let i = 0; i < arr.length - 1; i++) {
-        if( (arr[i + 1] - arr[i]) != 1) {
+        if( (arr[i + 1] - arr[i]) != 1 ) {
             return arr[i + 1];
         } 
-    } return null;
+    } 
+    return null;
 }
-console.log(firstNonConsecutive([1,2,3,5,]));
+console.log(firstNonConsecutive([1,2,3,5,])); //вышло число 5. Всё работает =)
+
+//Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+//The output should be two capital letters with a dot separating them.
+//It should look like this:
+//Sam Harris => S.H
+function abbrevName0(name){ //первая версия решения. Функция работает. Но дает не тот результат, который нужен на codewars
+    abbrev[0] = name[0];
+    abbrev[1] = ".";
+    for(let i = 0; i < name.length; i++) {
+        if(name[i] === " ") {
+            abbrev[2] = name[i + 1];
+        }
+    } return abbrev;
+}
+console.log(abbrevName0("Filipp Andrews"));//функция работает и возвращает вот такой результат:
+                                           //[ 'F', '.', 'A' ]
+                                           //а codewars требует "F.A."
+
+function abbrevName(name){
+    let abbrev = [];
+      for(let i = 0; i < name.length; i++) {
+          if(name[i] === " ") {
+              abbrev = name[0] + "." + name[i + 1];
+          }  
+      }
+      let UpperAbbrev = abbrev.toUpperCase();
+      return UpperAbbrev;
+  }
+  console.log(abbrevName("daniel brown"));// result: D.B. function check complete
+  console.log(abbrevName("Peter drozd"));//result: P.D. function check complete
